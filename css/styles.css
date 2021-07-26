@@ -1,0 +1,131 @@
+/**  Variables **/
+
+:root {
+    --primaryColor: hsl(233, 47%, 7%);
+    --cardBG      : hsl(244, 38%, 16%);
+    --softViolet  : hsl(277, 64%, 61%);
+
+    --white        : hsl(0, 0%, 100%);
+    --mainParagraph: hsla(0, 0%, 100%, 0.75);
+    --statsHeading : hsla(0, 0%, 100%, 0.6);
+
+    --fontSize        : 15px;
+    --fontFamilyInter : 'Inter', sans-serif;
+    --fontFamilyLexend: 'Lexend Deca', sans-serif;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size : 62.5%;
+}
+
+body {
+    font-size       : var(--fontSize);
+    background-color: var(--primaryColor);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/** FrontendMentor styles **/
+
+.attribution {
+    font-size : 11px;
+    text-align: center;
+    margin    : 3rem 0;
+    color     : var(--white);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/** Utilities **/
+
+.container {
+    width : 90%;
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+
+/** BEM **/
+
+.card {
+    display         : flex;
+    flex-direction  : column;
+    background-color: var(--cardBG);
+    margin-top      : 8rem;
+    border-radius   : 10px;
+}
+
+.card__img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    filter: opacity(0.35) drop-shadow(0.01px 0 0 hsl(300, 99%, 33%)) contrast(135%);
+}
+
+.card__info {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.card__title {
+    color      : var(--white);
+    font-family: var(--fontFamilyInter);
+    font-weight: 700;
+    margin-top : 2rem;
+    padding    : 2rem;
+}
+
+.card__title--color {
+    color: var(--softViolet);
+}
+
+.card__text {
+    color        : var(--mainParagraph);
+    font-family  : var(--fontFamilyInter);
+    font-size    : var(--fontSize);
+    font-weight  : 400;
+    line-height  : 2;
+    padding      : 0 4rem;
+    margin-bottom: 3rem;
+}
+
+.card__stats {
+    line-height  : 1.5;
+    margin-bottom: 2rem;
+}
+
+.card__stats--number {
+    color    : var(--white);
+    font-size: 3rem;
+}
+
+.card__stats--text {
+    color         : var(--statsHeading);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.card__stats--number,
+.card__stats--text {
+    font-family: var(--fontFamilyLexend);
+    text-align : center;
+}
